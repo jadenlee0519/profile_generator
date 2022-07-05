@@ -5,27 +5,21 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('What do you think of Node.js? ', (answer) => {
-  console.log(`Thank you for your valuable feedback: ${answer}`);
+rl.question("What's your name? Nicknames are also acceptable :): ", (nickNameAnswer) => {
+  rl.question("What's an activity you like doing?: ", (activityAnswer) => {
+    rl.question("What do you listen to while doing that?: ", (listenAnswer) => {
+ rl.question("Which meal is your favourite (eg: dinner, brunch, etc.): ", (mealAnswer) => {
+        rl.question("What's your favourite thing to eat for that meal?: ", (foodAnswer) => {
+  rl.question("Which sport is your absolute favourite?: ", (sportAnswer) => {
+              rl.question("What is your superpower? In a few words, tell us what you are amazing at!: ", (superPowerAnswer) => {
+              console.log("\nOnline Profile:");
+              console.log(`${nickNameAnswer} loves listening to ${listenAnswer} while ${activityAnswer}, devouring ${foodAnswer} for ${mealAnswer}, prefers ${sportAnswer} over any other sport, and is amazing at ${superPowerAnswer}.`);
 
-  rl.close();
+              rl.close();
+         });
+        });
+        });
+  });
+    });
 });
-
-rl.question("What's your name? Nicknames are also acceptable :)" , (NicknamesAnswer) => {
-  console.log(`Thank you for your valuable feedback: ${NicknamesAnswer}`);
-
-  rl.close();
-});
-
-rl.question("What's an activity you like doing?" , (activityAnswer) => {
-  console.log(`Thank you for your valuable feedback: ${activityAnswer}`);
-
-  rl.close();
-});
-
-rl.question("What do you listen to while doing that?" , (listenAnswer) => {
-  console.log(`Thank you for your valuable feedback: ${listenAnswer}`);
-
-  rl.close();
-});
-
+}); 
